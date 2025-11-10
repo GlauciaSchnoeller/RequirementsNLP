@@ -64,19 +64,19 @@ from joblib import load
 import pickle
 
 # Load model and vectorizer
-clf = load("models/log_reg_tfidf.pkl")
+model = load("models/log_reg_tfidf.pkl")
 with open("models/tfidf_vectorizer.pkl", "rb") as f:
     tfidf_vectorizer = pickle.load(f)
 
 # Predict example requirement
-req = "The system shall provide secure authentication."
-vec = tfidf_vectorizer.transform([req])
-label = clf.predict(vec)[0]
+requirement = "The system shall provide secure authentication."
+vector = tfidf_vectorizer.transform([requirement])
+label = model.predict(vector)[0]
 
-print(f"{req} -> {label}")
+print(f"{requirement} -> {label}")
 ```
 
-### Semantic Validation (Notebooks 06 & 07)
+### Semantic Validation (Notebooks 07)
 
 The semantic validation and quality analysis modules leverage **Sentence-BERT** and **linguistic heuristics** to assess requirement quality by:
 
