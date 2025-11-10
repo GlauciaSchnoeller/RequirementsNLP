@@ -57,7 +57,7 @@ jupyter notebook
 | **07_validations.ipynb** | In-depth analysis of ambiguity, inconsistency, and incompleteness with linguistic and embedding-based heuristics |
 
 
-## Example: Requirement Classification ##
+### Example: Requirement Classification
 
 ```python
 from joblib import load
@@ -76,7 +76,7 @@ label = clf.predict(vec)[0]
 print(f"{req} -> {label}")
 ```
 
-## Semantic Validation (Notebooks 06 & 07) ##
+### Semantic Validation (Notebooks 06 & 07)
 
 The semantic validation and quality analysis modules leverage **Sentence-BERT** and **linguistic heuristics** to assess requirement quality by:
 
@@ -92,12 +92,10 @@ The semantic validation and quality analysis modules leverage **Sentence-BERT** 
 
 
 
-## Next Steps ##
+### Next Steps
 
 - Integrate rule-based linguistic ambiguity detection  
-- Expand dataset with real project requirements  
-- Build a lightweight inference API (e.g., FastAPI or Streamlit)
-- Explore automatic suggestion of requirement rewrites using LLMs
+- Build a lightweight inference API (e.g., Streamlit)
 
 
 *Developed for educational and research purposes — ideal for NLP experiments in software engineering.*
